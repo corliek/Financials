@@ -1,0 +1,20 @@
+// 1) Enter valid SQL query (i.e. SELECT * FROM FOO)
+// 2) Highlight query and right-click select "Execute Selected Text"
+
+SELECT * FROM "Financials"."All_Customers"."customer" where customerid = 'CST01010'
+
+
+
+EXEC "All_Customers_WS"."All_Customers_customer"."getcustomer"('<?xml version="1.0" encoding="UTF-8"?>
+<customer_Input xmlns="http://www.metamatrix.com/account_Input">
+    <customerid>CST01034</customerid>
+</customer_Input>
+')
+
+select * from ( exec "Customer_upd"."mutCust"('CST01011',null) ) AS X_X
+
+select * from ( exec "Customer2"."getCustomers"('CST01012') ) AS X_X
+
+SELECT * FROM "Financials"."All_Customers"."customer" where customerid = 'CST01010'
+
+SELECT * FROM "Financials"."All_Customers"."customer" where customerid = 'CST01010'

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation" xmlns:vxmldoc="http://www.metamatrix.com/metamodels/XmlDocument" xmlns:xsd="http://www.eclipse.org/xsd/2002/XSD">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:fc78dc31-d1ac-4943-b35e-220cd5c7b452" primaryMetamodelUri="http://www.metamatrix.com/metamodels/XmlDocument" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="11.1.1.v20170921-1447">
+    <modelImports xmi:uuid="mmuuid:9b8f6a30-f4ce-43b9-9e60-88194d1ebac7" name="All_Customers_Output" modelLocation="All_Customers_Output.xsd" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:217e7b25-7834-424a-9581-7ec9e8a6f1b7" name="DataDictionary" modelLocation="../Schemas/DataDictionary.xsd" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:277caf39-e37f-4024-ad91-7fcec1517295" name="All_Customers" modelLocation="../FederatedDataLayer/All_Customers.xmi" uuid="mmuuid:fe39ef00-caec-458f-8d99-727f4c94084f" modelType="VIRTUAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <vxmldoc:XmlDocument xmi:uuid="mmuuid:c0157ba8-a16c-45db-a8a2-03c4775d50cb" name="account_OutputView">
+    <root xmi:uuid="mmuuid:d91685bf-728d-4354-9e91-94056fe72afe" name="account_Output" namespace="mmuuid/38f68c29-cc86-4358-a804-7ab8a1bfaed6">
+      <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//account_Output;XSDElementDeclaration"/>
+      <entities xsi:type="vxmldoc:XmlSequence" xmi:uuid="mmuuid:d6c7326c-aa5a-47ee-9484-8b44bdf735ac">
+        <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:5f581c11-e474-4f23-b5e3-bd508e8903ea" name="account_Output_Instance" namespace="mmuuid/38f68c29-cc86-4358-a804-7ab8a1bfaed6">
+          <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//account_Output;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/account_Output_Instance;XSDElementDeclaration"/>
+          <entities xsi:type="vxmldoc:XmlSequence" xmi:uuid="mmuuid:f2c1593e-d3a1-4425-bac8-d9890efeed49">
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:56d8c5f6-cd1d-4425-8507-bbc2ad15c52b" name="accountid">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//account_Output_Type;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/accountid;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:228a8548-6822-4cb8-9f48-ed88663b2d11" name="customerid">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//account_Output_Type;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1/customerid;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:2f3d7f49-c0e3-487f-913b-b7c325861293" name="accounttype">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//account_Output_Type;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2/accounttype;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:ca1bd504-ff10-4fb7-9d03-fe99746ee7b7" name="accountstatus">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//account_Output_Type;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=3/accountstatus;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:33a9a339-b42c-4342-8f9d-90e9d3f3d1c2" name="dateopened">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//account_Output_Type;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=4/dateopened;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:7b169dd4-f848-4e65-87dd-e3982c06bf43" name="dateclosed">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//account_Output_Type;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=5/dateclosed;XSDElementDeclaration"/>
+            </entities>
+            <xsdComponent xsi:type="xsd:XSDModelGroup" href="All_Customers_Output.xsd#//account_Output_Type;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup"/>
+          </entities>
+        </entities>
+        <xsdComponent xsi:type="xsd:XSDModelGroup" href="All_Customers_Output.xsd#//account_Output;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup"/>
+      </entities>
+      <declaredNamespaces xmi:uuid="mmuuid:38f68c29-cc86-4358-a804-7ab8a1bfaed6" prefix="account_Output" uri="http://www.metamatrix.com/account_Output"/>
+      <declaredNamespaces xmi:uuid="mmuuid:87231975-181e-4e17-ae97-917068bcee40" prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
+    </root>
+  </vxmldoc:XmlDocument>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:6906ec6a-c38f-4b9b-838f-f3bd308b10c1">
+    <transformationMappings xsi:type="transformation:TreeMappingRoot" xmi:uuid="mmuuid:554565d7-7ee8-4ae6-823d-8c6bbe724bff" inputs="mmuuid/10042b32-e01d-46b9-b0ab-645a0fb772df" outputs="mmuuid/5f581c11-e474-4f23-b5e3-bd508e8903ea" target="mmuuid/c0157ba8-a16c-45db-a8a2-03c4775d50cb">
+      <nested xmi:uuid="mmuuid:d4174c1e-6675-4101-ae67-5ae0ce568057" inputs="mmuuid/9c2f1011-36aa-45d4-a60f-701ae41af39d" outputs="mmuuid/56d8c5f6-cd1d-4425-8507-bbc2ad15c52b"/>
+      <nested xmi:uuid="mmuuid:dc431feb-f74a-46ef-8af1-a5786637a352" inputs="mmuuid/5d76475c-a0f9-460c-b1ec-54d4d3db88e9" outputs="mmuuid/228a8548-6822-4cb8-9f48-ed88663b2d11"/>
+      <nested xmi:uuid="mmuuid:1c0de895-c318-445f-8af2-9b4f42f05b9c" inputs="mmuuid/20fa616d-e9f8-4526-9aad-f287a41f45e7" outputs="mmuuid/2f3d7f49-c0e3-487f-913b-b7c325861293"/>
+      <nested xmi:uuid="mmuuid:c1b784ad-1ba4-43e3-a124-22c143c10755" inputs="mmuuid/b9f4bce0-f10d-4b49-a550-ead2d4581365" outputs="mmuuid/ca1bd504-ff10-4fb7-9d03-fe99746ee7b7"/>
+      <nested xmi:uuid="mmuuid:e18f6556-3ac4-4583-a402-174ad35b63fc" inputs="mmuuid/aee66ec3-2a82-48c4-bc0e-439de2b919a5" outputs="mmuuid/33a9a339-b42c-4342-8f9d-90e9d3f3d1c2"/>
+      <nested xmi:uuid="mmuuid:dd1d15b7-a30f-4e0c-b6b2-b5baeece3acd" inputs="mmuuid/978b3c9e-3876-4e87-af8f-dcd86e6d6d1c" outputs="mmuuid/7b169dd4-f848-4e65-87dd-e3982c06bf43"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:e31e9e02-36f9-404d-8742-b380de4068d1" outputs="mmuuid/10042b32-e01d-46b9-b0ab-645a0fb772df" target="mmuuid/10042b32-e01d-46b9-b0ab-645a0fb772df">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:b5dddad5-700b-4993-83de-7c020a49a120">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:e3efb637-5348-486b-a35d-1eb2b7460735" selectSql="SELECT * FROM All_Customers.account"/>
+        <aliases xmi:uuid="mmuuid:fc8b6a8f-5825-409d-a074-b5df70f21f51" alias="account">
+          <aliasedObject href="../FederatedDataLayer/All_Customers.xmi#mmuuid/1f0b79e3-be30-499c-a766-5f4061891764"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:40022754-6ecb-489f-84a6-f549c3080e41" outputs="mmuuid/9c2f1011-36aa-45d4-a60f-701ae41af39d">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/eeb096a1-806c-424e-bdab-58a6e7960c63"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:8e4353ee-88a4-46bf-8b7d-81f1615315f4" outputs="mmuuid/5d76475c-a0f9-460c-b1ec-54d4d3db88e9">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/17e05416-dc6c-4b59-9d86-b5ca9a1a30c9"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f971158a-9026-45fe-9817-30fe34dbb39c" outputs="mmuuid/20fa616d-e9f8-4526-9aad-f287a41f45e7">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/08fc75c6-224e-4539-8039-932af589cd1a"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:bc30c7b4-89d0-4c18-b164-86bf7323c8cd" outputs="mmuuid/b9f4bce0-f10d-4b49-a550-ead2d4581365">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/63777723-ade1-4741-9bde-6c8aa0ffe25d"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:8cb549a5-ad35-465c-977d-7c24669c8f8d" outputs="mmuuid/aee66ec3-2a82-48c4-bc0e-439de2b919a5">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/41a69347-fa8d-4275-8a21-977975c9746b"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b806fc02-ede8-42f0-9553-49e78cb05ff6" outputs="mmuuid/978b3c9e-3876-4e87-af8f-dcd86e6d6d1c">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/3e6d3147-5c04-4c3e-8693-11dbca911eef"/>
+      </nested>
+      <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/1f0b79e3-be30-499c-a766-5f4061891764"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:TreeMappingRoot" xmi:uuid="mmuuid:861be9a5-6787-4b8f-a8ca-a16d8cc7c44e" inputs="mmuuid/c9ebda85-7f38-46d8-a4fa-fcad3e025a39" outputs="mmuuid/b24b39c4-f69c-463f-8887-cdfb9b3fa2fa" target="mmuuid/8d10d047-49e0-43d0-a698-7b4a025c2c95">
+      <nested xmi:uuid="mmuuid:84cfddfd-529a-4e6d-ba67-459caaeac65b" inputs="mmuuid/93600860-cc50-4da8-8d24-c3a75b04721f" outputs="mmuuid/6aefc46f-467c-46cb-a230-fef3ac8b86e9"/>
+      <nested xmi:uuid="mmuuid:18eb64a6-7da4-442c-830d-9aa84bda60e1" inputs="mmuuid/3bc6b41c-c272-435c-bd24-a89463c985dc" outputs="mmuuid/9c67df52-6fc3-4691-b007-b1acb100dc91"/>
+      <nested xmi:uuid="mmuuid:aa7878ec-34a9-44b3-b5d1-907a26a4fee2" inputs="mmuuid/85a8e175-442a-4b86-ad18-6e2a9e768031" outputs="mmuuid/e37b99b2-379a-4502-bb82-92e941d70f89"/>
+      <nested xmi:uuid="mmuuid:088c50f2-f503-4247-b46b-6b92715b587f" inputs="mmuuid/ac54379c-6e9b-4336-95d4-f6d6323426ed" outputs="mmuuid/1287b679-3d63-4df2-af1a-431bb87f7e56"/>
+      <nested xmi:uuid="mmuuid:d4fc04ca-8395-4332-bf55-43898c48f0bc" inputs="mmuuid/2e43af7b-3b9c-4679-b960-d09963cf9a62" outputs="mmuuid/9c12e89e-975a-48f2-bd96-170d389aa220"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:b6dd63bb-4ec6-495b-b2af-bebbb3336bf5" outputs="mmuuid/c9ebda85-7f38-46d8-a4fa-fcad3e025a39" target="mmuuid/c9ebda85-7f38-46d8-a4fa-fcad3e025a39">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:c9ea5e83-8728-4788-9da0-02a2416bd9c9">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:689703c9-3dc5-404f-a2ce-a7afb85a1ade" selectSql="SELECT * FROM All_Customers.accountholdings"/>
+        <aliases xmi:uuid="mmuuid:31514389-8b5f-44bc-8b9c-46e99fa65a67" alias="accountholdings">
+          <aliasedObject href="../FederatedDataLayer/All_Customers.xmi#mmuuid/1b0bbf6b-5668-4a3a-b933-2e68a89fc30b"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4de69cc7-2ea5-4737-964f-feea682a921b" outputs="mmuuid/93600860-cc50-4da8-8d24-c3a75b04721f">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/8db9a93d-26e0-4a44-b0d9-fd8e5c47f9ad"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:deff0a7a-46ed-4a7e-9446-a24e1d224cc5" outputs="mmuuid/3bc6b41c-c272-435c-bd24-a89463c985dc">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/edf9c585-ee3a-4f02-aa7e-6bcb7fc10f32"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:37cf80ae-7c54-4147-b1a0-8e44d7debaf6" outputs="mmuuid/85a8e175-442a-4b86-ad18-6e2a9e768031">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/1a1d6231-173c-4d5b-82a2-df228e68a7c5"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4825c0e5-d3ec-4757-b65c-1b3d16763af7" outputs="mmuuid/ac54379c-6e9b-4336-95d4-f6d6323426ed">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/0575c8dc-cbfa-46ae-a6e9-11fe728a50a4"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f57ea661-cca7-48a2-bf88-fdac238c423f" outputs="mmuuid/2e43af7b-3b9c-4679-b960-d09963cf9a62">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/24124bbd-4b62-4800-bb54-0489c86e73d5"/>
+      </nested>
+      <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/1b0bbf6b-5668-4a3a-b933-2e68a89fc30b"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:TreeMappingRoot" xmi:uuid="mmuuid:064e0107-ea46-4608-9dd6-8eae97a7615c" inputs="mmuuid/aba14d5f-50b2-4cce-bf52-04c19ea3b196" outputs="mmuuid/f9d62157-7e49-4eef-becf-e459e9d21bc3" target="mmuuid/5d58cf0e-1fbf-4a33-a0be-8e0380c440f1">
+      <nested xmi:uuid="mmuuid:fbcbedf4-cad6-4998-9278-c03e9522f49c" inputs="mmuuid/e6034765-173c-4be4-9f7c-1c912d64c985" outputs="mmuuid/9323c018-2273-44de-9c6a-59746ad04e4d"/>
+      <nested xmi:uuid="mmuuid:13c8e923-8818-4400-9bba-30e0d9a461d0" inputs="mmuuid/d499b327-dc85-4844-bcbd-785da370be3a" outputs="mmuuid/c934df84-e61a-4dcb-877b-e520b7c9be47"/>
+      <nested xmi:uuid="mmuuid:026ccf1a-2694-402d-aadc-5b62f975f5a4" inputs="mmuuid/32c81b38-f59e-4e15-9b19-e967a649d18c" outputs="mmuuid/b6862c40-fa7f-4207-9906-0d7edb18a065"/>
+      <nested xmi:uuid="mmuuid:df9586d3-e5c0-4e2f-b10f-c69e372d53ca" inputs="mmuuid/63c67976-8031-4713-8699-8c4132dfcfc9" outputs="mmuuid/cd2b8c76-2768-47c6-8498-fdc3d393093c"/>
+      <nested xmi:uuid="mmuuid:8ec92d37-bbfa-4ae9-8bd3-04cb94a436d5" inputs="mmuuid/a322893c-8338-49ee-8c36-9a3dd83808d5" outputs="mmuuid/0b0db1ba-c621-4852-b07a-84f02715f929"/>
+      <nested xmi:uuid="mmuuid:25900267-10f3-47bc-b6fe-d0a7021b219e" inputs="mmuuid/633731a5-c1a4-4ef1-90b9-1ff28f3096c9" outputs="mmuuid/f7613079-ff69-4ba3-a2f9-441c5bbcf81a"/>
+      <nested xmi:uuid="mmuuid:37c685bf-ee5b-48d0-9bbe-943b2d79e5a4" inputs="mmuuid/b6a50aff-f092-4ca5-a54f-47b35a85669d" outputs="mmuuid/485120cd-92a1-4521-ad99-8be371b2ea75"/>
+      <nested xmi:uuid="mmuuid:3bb6d4ec-f05a-4cb3-b06b-873becdfd215" inputs="mmuuid/347a98ab-f5d3-4398-9411-baabd37b722d" outputs="mmuuid/06b12a2d-6394-47fb-81e7-652b7a221aac"/>
+      <nested xmi:uuid="mmuuid:4889564a-8e53-43e5-a5fa-269c7a786ce7" inputs="mmuuid/95a1c715-fe61-4626-a475-dd7fb51b36fd" outputs="mmuuid/b14dab5d-42cd-4333-81d7-32e632b34e42"/>
+      <nested xmi:uuid="mmuuid:f8f64393-f2c3-43a2-a70c-1bb1341a17a6" inputs="mmuuid/02f1a1d9-184d-4523-9541-274eaddc0cae" outputs="mmuuid/29cb0018-cf0a-47be-82cb-b23298f02f25"/>
+      <nested xmi:uuid="mmuuid:aef06cb0-e2c9-4e15-95e1-6afce75fd999" inputs="mmuuid/83bd7c3d-eaa1-4655-98b8-b12b5f1b1cfa" outputs="mmuuid/6ea2554b-031e-47c5-9d06-0663da812561"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:68157569-3915-4361-b18f-2e5ec44611fa" outputs="mmuuid/aba14d5f-50b2-4cce-bf52-04c19ea3b196" target="mmuuid/aba14d5f-50b2-4cce-bf52-04c19ea3b196">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:bea21d3a-c5fe-41fe-9b67-4c09b81128a4">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:cdb12c60-f157-444e-a61f-0bf9473490d1" selectSql="SELECT * FROM All_Customers.customer"/>
+        <aliases xmi:uuid="mmuuid:8f2b7591-b55a-4457-babb-8d2f65aecca6" alias="customer">
+          <aliasedObject href="../FederatedDataLayer/All_Customers.xmi#mmuuid/f9200404-2977-4b69-81f6-a43ebe67290b"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:5f2e5850-f726-4b7e-95af-285e1be74853" outputs="mmuuid/e6034765-173c-4be4-9f7c-1c912d64c985">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/865e6516-b6bb-4932-be77-2ed5187390c2"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b2f20caa-435f-4ffa-a680-0c8484e7db1e" outputs="mmuuid/d499b327-dc85-4844-bcbd-785da370be3a">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/5e824689-e228-4a10-a3b2-ab8e2dbef5ef"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:5033d0ed-eb74-4a0c-939d-86efbd7d1e9c" outputs="mmuuid/32c81b38-f59e-4e15-9b19-e967a649d18c">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/38412a73-0ec6-46d9-9f27-5aed35e855d0"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:c92c6f85-6594-4bf2-aa75-8df33c6ccf4c" outputs="mmuuid/63c67976-8031-4713-8699-8c4132dfcfc9">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/d63b4a9a-2731-4b9c-99b0-72a0dd3e7f2c"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:1e5f3bf2-866c-4bab-8989-e894117c0186" outputs="mmuuid/a322893c-8338-49ee-8c36-9a3dd83808d5">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/b8f4858e-8da0-4e92-8093-6f5c70b3c999"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:48ef8feb-fd53-49a1-bc74-c88c69369274" outputs="mmuuid/633731a5-c1a4-4ef1-90b9-1ff28f3096c9">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/219c206a-4ed1-427a-99a3-4ea483becad1"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:a7717745-5dcc-4430-bb79-e9b392bd7bd0" outputs="mmuuid/b6a50aff-f092-4ca5-a54f-47b35a85669d">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/3f81daec-cadc-4af9-a828-99a9bc221e82"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:18c042cd-a55b-4a27-8ff1-2da3358c1830" outputs="mmuuid/347a98ab-f5d3-4398-9411-baabd37b722d">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/ad3677f8-8741-4ebf-b2d2-a944a687023d"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:59a3dd73-2f8c-4afa-8f65-7ac50aff60ed" outputs="mmuuid/95a1c715-fe61-4626-a475-dd7fb51b36fd">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/fcfd8168-af19-449e-ab13-0c5f725d8c8f"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:012027fb-9dc2-46ee-8390-bc6177fbbd36" outputs="mmuuid/02f1a1d9-184d-4523-9541-274eaddc0cae">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/2dfe68b1-c8bb-4cbb-82d1-67a8bedaaec4"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:797d61eb-c5ca-41de-a447-0cfb6b68abc5" outputs="mmuuid/83bd7c3d-eaa1-4655-98b8-b12b5f1b1cfa">
+        <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/02e12283-d114-4fac-9f88-d5a01184cf19"/>
+      </nested>
+      <inputs href="../FederatedDataLayer/All_Customers.xmi#mmuuid/f9200404-2977-4b69-81f6-a43ebe67290b"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <transformation:MappingClassSetContainer xmi:uuid="mmuuid:fe2daeb8-8d4d-4f22-881c-db418fb82fe6">
+    <mappingClassSets xmi:uuid="mmuuid:0bbd148d-2ed9-4073-8400-198ad9e0f849" target="mmuuid/c0157ba8-a16c-45db-a8a2-03c4775d50cb">
+      <mappingClasses xmi:uuid="mmuuid:10042b32-e01d-46b9-b0ab-645a0fb772df" name="account_Output_Instance">
+        <columns xmi:uuid="mmuuid:9c2f1011-36aa-45d4-a60f-701ae41af39d" name="accountid">
+          <type href="../Schemas/DataDictionary.xsd#//AccountID;XSDSimpleTypeDefinition=6"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:5d76475c-a0f9-460c-b1ec-54d4d3db88e9" name="customerid">
+          <type href="../Schemas/DataDictionary.xsd#//CustomerID;XSDSimpleTypeDefinition=34"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:20fa616d-e9f8-4526-9aad-f287a41f45e7" name="accounttype">
+          <type href="../Schemas/DataDictionary.xsd#//AccountType;XSDSimpleTypeDefinition=7"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:b9f4bce0-f10d-4b49-a550-ead2d4581365" name="accountstatus">
+          <type href="../Schemas/DataDictionary.xsd#//AccountStatus;XSDSimpleTypeDefinition=8"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:aee66ec3-2a82-48c4-bc0e-439de2b919a5" name="dateopened">
+          <type href="../Schemas/DataDictionary.xsd#//DateOpened;XSDSimpleTypeDefinition=9"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:978b3c9e-3876-4e87-af8f-dcd86e6d6d1c" name="dateclosed">
+          <type href="../Schemas/DataDictionary.xsd#//DateClosed;XSDSimpleTypeDefinition=10"/>
+        </columns>
+        <inputSet xmi:uuid="mmuuid:722f273a-15c9-41f9-abce-82e6cd9642d8"/>
+      </mappingClasses>
+    </mappingClassSets>
+    <mappingClassSets xmi:uuid="mmuuid:7b8188d4-9045-4013-888c-97b685fd8d65" target="mmuuid/8d10d047-49e0-43d0-a698-7b4a025c2c95">
+      <mappingClasses xmi:uuid="mmuuid:c9ebda85-7f38-46d8-a4fa-fcad3e025a39" name="accountholdings_Output_Instance">
+        <columns xmi:uuid="mmuuid:93600860-cc50-4da8-8d24-c3a75b04721f" name="transactionid">
+          <type href="../Schemas/DataDictionary.xsd#//TransactionID;XSDSimpleTypeDefinition=11"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:3bc6b41c-c272-435c-bd24-a89463c985dc" name="accountid">
+          <type href="../Schemas/DataDictionary.xsd#//AccountID;XSDSimpleTypeDefinition=6"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:85a8e175-442a-4b86-ad18-6e2a9e768031" name="productid">
+          <type href="../Schemas/DataDictionary.xsd#//ProductID;XSDSimpleTypeDefinition=12"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:ac54379c-6e9b-4336-95d4-f6d6323426ed" name="purchasedate">
+          <type href="../Schemas/DataDictionary.xsd#//PurchaseDate;XSDSimpleTypeDefinition=14"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:2e43af7b-3b9c-4679-b960-d09963cf9a62" name="productshares">
+          <type href="../Schemas/DataDictionary.xsd#//ProductShares;XSDSimpleTypeDefinition=13"/>
+        </columns>
+        <inputSet xmi:uuid="mmuuid:0d3bb469-e922-4ccc-b8c2-689cc0671bec"/>
+      </mappingClasses>
+    </mappingClassSets>
+    <mappingClassSets xmi:uuid="mmuuid:870d1ef8-d3ea-429e-a5e5-de2f2dd6f579" target="mmuuid/5d58cf0e-1fbf-4a33-a0be-8e0380c440f1">
+      <mappingClasses xmi:uuid="mmuuid:aba14d5f-50b2-4cce-bf52-04c19ea3b196" name="customer_Output_Instance">
+        <columns xmi:uuid="mmuuid:e6034765-173c-4be4-9f7c-1c912d64c985" name="customerid">
+          <type href="../Schemas/DataDictionary.xsd#//CustomerID;XSDSimpleTypeDefinition=34"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:d499b327-dc85-4844-bcbd-785da370be3a" name="firstname">
+          <type href="../Schemas/DataDictionary.xsd#//FirstName;XSDSimpleTypeDefinition=35"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:32c81b38-f59e-4e15-9b19-e967a649d18c" name="lastname">
+          <type href="../Schemas/DataDictionary.xsd#//LastName;XSDSimpleTypeDefinition=36"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:63c67976-8031-4713-8699-8c4132dfcfc9" name="middlename">
+          <type href="../Schemas/DataDictionary.xsd#//MiddleInitial;XSDSimpleTypeDefinition"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:a322893c-8338-49ee-8c36-9a3dd83808d5" name="streetaddress">
+          <type href="../Schemas/DataDictionary.xsd#//StreetAddress;XSDSimpleTypeDefinition=37"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:633731a5-c1a4-4ef1-90b9-1ff28f3096c9" name="streetaddress2">
+          <type href="../Schemas/DataDictionary.xsd#//StreetAddress;XSDSimpleTypeDefinition=37"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:b6a50aff-f092-4ca5-a54f-47b35a85669d" name="city">
+          <type href="../Schemas/DataDictionary.xsd#//City;XSDSimpleTypeDefinition=1"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:347a98ab-f5d3-4398-9411-baabd37b722d" name="stateprovince">
+          <type href="../Schemas/DataDictionary.xsd#//StateProvince;XSDSimpleTypeDefinition=2"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:95a1c715-fe61-4626-a475-dd7fb51b36fd" name="postalcode">
+          <type href="../Schemas/DataDictionary.xsd#//PostalCode;XSDSimpleTypeDefinition=3"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:02f1a1d9-184d-4523-9541-274eaddc0cae" name="country">
+          <type href="../Schemas/DataDictionary.xsd#//Country;XSDSimpleTypeDefinition=4"/>
+        </columns>
+        <columns xmi:uuid="mmuuid:83bd7c3d-eaa1-4655-98b8-b12b5f1b1cfa" name="phonenumber">
+          <type href="../Schemas/DataDictionary.xsd#//PhoneNumber;XSDSimpleTypeDefinition=5"/>
+        </columns>
+        <inputSet xmi:uuid="mmuuid:d03f8dcf-82b1-4009-828d-7c703226cd87"/>
+      </mappingClasses>
+    </mappingClassSets>
+  </transformation:MappingClassSetContainer>
+  <vxmldoc:XmlDocument xmi:uuid="mmuuid:8d10d047-49e0-43d0-a698-7b4a025c2c95" name="accountholdings_OutputView">
+    <root xmi:uuid="mmuuid:5e3e7536-6d4c-4f77-abaa-57ce4df53d64" name="accountholdings_Output">
+      <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//accountholdings_Output;XSDElementDeclaration=1"/>
+      <entities xsi:type="vxmldoc:XmlSequence" xmi:uuid="mmuuid:a4bfa052-d64f-40a5-a5f6-0efefb10f0b4">
+        <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:b24b39c4-f69c-463f-8887-cdfb9b3fa2fa" name="accountholdings_Output_Instance">
+          <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//accountholdings_Output;XSDElementDeclaration=1/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/accountholdings_Output_Instance;XSDElementDeclaration"/>
+          <entities xsi:type="vxmldoc:XmlSequence" xmi:uuid="mmuuid:60f9bb77-235a-4189-b113-16f817dca859">
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:6aefc46f-467c-46cb-a230-fef3ac8b86e9" name="transactionid">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//accountholdings_Output_Type;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle/transactionid;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:9c67df52-6fc3-4691-b007-b1acb100dc91" name="accountid">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//accountholdings_Output_Type;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=1/accountid;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:e37b99b2-379a-4502-bb82-92e941d70f89" name="productid">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//accountholdings_Output_Type;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=2/productid;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:1287b679-3d63-4df2-af1a-431bb87f7e56" name="purchasedate">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//accountholdings_Output_Type;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=3/purchasedate;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:9c12e89e-975a-48f2-bd96-170d389aa220" name="productshares">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//accountholdings_Output_Type;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=4/productshares;XSDElementDeclaration"/>
+            </entities>
+            <xsdComponent xsi:type="xsd:XSDModelGroup" href="All_Customers_Output.xsd#//accountholdings_Output_Type;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup"/>
+          </entities>
+        </entities>
+        <xsdComponent xsi:type="xsd:XSDModelGroup" href="All_Customers_Output.xsd#//accountholdings_Output;XSDElementDeclaration=1/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup"/>
+      </entities>
+      <declaredNamespaces xmi:uuid="mmuuid:dc50706c-9012-403e-8a5f-2ef4df640adc" prefix="account_Output" uri="http://www.metamatrix.com/account_Output"/>
+      <declaredNamespaces xmi:uuid="mmuuid:fc11b537-7e80-4dc3-9956-fdec4904eadf" prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
+    </root>
+  </vxmldoc:XmlDocument>
+  <vxmldoc:XmlDocument xmi:uuid="mmuuid:5d58cf0e-1fbf-4a33-a0be-8e0380c440f1" name="customer_OutputView">
+    <root xmi:uuid="mmuuid:f06c18b7-9af7-4622-ab2f-47409dc462cc" name="customer_Output">
+      <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output;XSDElementDeclaration=2"/>
+      <entities xsi:type="vxmldoc:XmlSequence" xmi:uuid="mmuuid:538a7ef8-44b6-4558-b57f-2c9188f944fb">
+        <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:f9d62157-7e49-4eef-becf-e459e9d21bc3" name="customer_Output_Instance">
+          <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output;XSDElementDeclaration=2/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/customer_Output_Instance;XSDElementDeclaration"/>
+          <entities xsi:type="vxmldoc:XmlSequence" xmi:uuid="mmuuid:1d352d09-06ad-4175-af91-3dbc1e9154ab">
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:9323c018-2273-44de-9c6a-59746ad04e4d" name="customerid">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle/customerid;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:c934df84-e61a-4dcb-877b-e520b7c9be47" name="firstname">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=1/firstname;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:b6862c40-fa7f-4207-9906-0d7edb18a065" name="lastname">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=2/lastname;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:cd2b8c76-2768-47c6-8498-fdc3d393093c" name="middlename">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=3/middlename;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:0b0db1ba-c621-4852-b07a-84f02715f929" name="streetaddress">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=4/streetaddress;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:f7613079-ff69-4ba3-a2f9-441c5bbcf81a" name="streetaddress2">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=5/streetaddress2;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:485120cd-92a1-4521-ad99-8be371b2ea75" name="city">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=6/city;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:06b12a2d-6394-47fb-81e7-652b7a221aac" name="stateprovince">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=7/stateprovince;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:b14dab5d-42cd-4333-81d7-32e632b34e42" name="postalcode">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=8/postalcode;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:29cb0018-cf0a-47be-82cb-b23298f02f25" name="country">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=9/country;XSDElementDeclaration"/>
+            </entities>
+            <entities xsi:type="vxmldoc:XmlElement" xmi:uuid="mmuuid:6ea2554b-031e-47c5-9d06-0663da812561" name="phonenumber">
+              <xsdComponent xsi:type="xsd:XSDElementDeclaration" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=10/phonenumber;XSDElementDeclaration"/>
+            </entities>
+            <xsdComponent xsi:type="xsd:XSDModelGroup" href="All_Customers_Output.xsd#//customer_Output_Type;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup"/>
+          </entities>
+        </entities>
+        <xsdComponent xsi:type="xsd:XSDModelGroup" href="All_Customers_Output.xsd#//customer_Output;XSDElementDeclaration=2/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup"/>
+      </entities>
+      <declaredNamespaces xmi:uuid="mmuuid:3def15fb-7235-42a3-8c83-54da6a23cddc" prefix="account_Output" uri="http://www.metamatrix.com/account_Output"/>
+      <declaredNamespaces xmi:uuid="mmuuid:79f98d4e-0406-411f-a078-8b706b892bd6" prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
+    </root>
+  </vxmldoc:XmlDocument>
+</xmi:XMI>

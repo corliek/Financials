@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:mmws="http://www.metamatrix.com/metamodels/WebService" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:43668745-9f6a-475e-baba-8132b39a5e44" primaryMetamodelUri="http://www.metamatrix.com/metamodels/WebService" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="11.1.1.v20170921-1447">
+    <modelImports xmi:uuid="mmuuid:2ebea042-e683-4d3f-a6df-ab16f88550c7" name="All_Customers_Input" modelLocation="All_Customers_Input.xsd" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:4c913d0c-a77a-48d6-b3ff-e602b8c2e8c2" name="All_Customers_Output" modelLocation="All_Customers_Output.xsd" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:38a8795c-a9eb-4ce1-889a-c958c10ec745" name="All_Customers_Output_View" modelLocation="All_Customers_Output_View.xmi" uuid="mmuuid:fc78dc31-d1ac-4943-b35e-220cd5c7b452" modelType="VIRTUAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/XmlDocument"/>
+  </mmcore:ModelAnnotation>
+  <mmws:Interface xmi:uuid="mmuuid:019b6a4c-ae87-4b33-bdb0-05a72be87f64" name="All_Customers_account">
+    <operations xmi:uuid="mmuuid:08e5aad3-8df9-49b6-91a5-b445a79ba72a" name="getaccount">
+      <input xmi:uuid="mmuuid:aba2daff-e1a6-4873-be92-b90f738935ef" name="account_InputMsg">
+        <contentElement href="All_Customers_Input.xsd#//account_Input;XSDElementDeclaration"/>
+      </input>
+      <output xmi:uuid="mmuuid:cbecd27f-1dd9-4174-be72-a4ad26a2553e" name="account_OutputMsg">
+        <contentElement href="All_Customers_Output.xsd#//account_Output;XSDElementDeclaration"/>
+        <samples xmi:uuid="mmuuid:bbba3ccc-8945-4db3-8561-c286581e9826"/>
+        <xmlDocument href="All_Customers_Output_View.xmi#mmuuid/c0157ba8-a16c-45db-a8a2-03c4775d50cb"/>
+      </output>
+    </operations>
+  </mmws:Interface>
+  <mmws:Interface xmi:uuid="mmuuid:d5cee077-d5dd-4540-9a10-92032e0afe4d" name="All_Customers_accountholdings">
+    <operations xmi:uuid="mmuuid:158d287c-6a83-4843-b88a-1353e81f8353" name="getaccountholdings">
+      <input xmi:uuid="mmuuid:e0a5eca5-1e00-4236-88e1-43921e105115" name="accountholdings_InputMsg">
+        <contentElement href="All_Customers_Input.xsd#//accountholdings_Input;XSDElementDeclaration=1"/>
+      </input>
+      <output xmi:uuid="mmuuid:e0a925c0-85f0-4156-8607-987fbb6e4287" name="accountholdings_OutputMsg">
+        <contentElement href="All_Customers_Output.xsd#//accountholdings_Output;XSDElementDeclaration=1"/>
+        <samples xmi:uuid="mmuuid:4f8d0474-bd14-43cf-a4ea-3a4169aae506"/>
+        <xmlDocument href="All_Customers_Output_View.xmi#mmuuid/8d10d047-49e0-43d0-a698-7b4a025c2c95"/>
+      </output>
+    </operations>
+  </mmws:Interface>
+  <mmws:Interface xmi:uuid="mmuuid:8c276c0f-03a0-4764-b93b-ea556b4d3abd" name="All_Customers_customer">
+    <operations xmi:uuid="mmuuid:490a392a-c064-419d-8376-78fb9a7e13a5" name="getcustomer">
+      <input xmi:uuid="mmuuid:7ae95fe9-6cc3-4f25-b882-7a2cd7cd7d2c" name="customer_InputMsg">
+        <contentElement href="All_Customers_Input.xsd#//customer_Input;XSDElementDeclaration=2"/>
+      </input>
+      <output xmi:uuid="mmuuid:70399030-45d4-44cb-bb45-4455134f9429" name="customer_OutputMsg">
+        <contentElement href="All_Customers_Output.xsd#//customer_Output;XSDElementDeclaration=2"/>
+        <samples xmi:uuid="mmuuid:47d1369c-d060-492e-9ed3-bf364421d917"/>
+        <xmlDocument href="All_Customers_Output_View.xmi#mmuuid/5d58cf0e-1fbf-4a33-a0be-8e0380c440f1"/>
+      </output>
+    </operations>
+  </mmws:Interface>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:2814de5c-8b24-416d-9a34-c42ceacff560">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:048d51ec-285e-4735-a43d-688df3992116" outputs="mmuuid/08e5aad3-8df9-49b6-91a5-b445a79ba72a" target="mmuuid/08e5aad3-8df9-49b6-91a5-b445a79ba72a">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:6e3ae94c-d2ae-4882-a39f-3812404f30f0">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:302f8be5-403b-4822-96c9-2bb30e716b45" selectSql="CREATE VIRTUAL PROCEDURE BEGIN DECLARE string VARIABLES.IN_ACCOUNTID;VARIABLES.IN_ACCOUNTID = xPathValue(All_Customers_WS.All_Customers_account.getaccount.account_InputMsg, '/*:account_Input/*:accountid');SELECT * FROM All_Customers_Output_View.account_OutputView WHERE  (All_Customers_Output_View.account_OutputView.account_Output.account_Output_Instance.accountid = convert(VARIABLES.IN_ACCOUNTID, long)) ; END"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:a561015b-d898-4021-af7c-418be4842987" outputs="mmuuid/bbba3ccc-8945-4db3-8561-c286581e9826"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:b03da9b0-8d23-4777-9af9-4887f49a8ef9" outputs="mmuuid/158d287c-6a83-4843-b88a-1353e81f8353" target="mmuuid/158d287c-6a83-4843-b88a-1353e81f8353">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:2fb48d8c-c2e0-43e8-910a-5b05f0e71a2c">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:ea6017ad-aeb9-4eb0-81f2-da349fdccc57" selectSql="CREATE VIRTUAL PROCEDURE BEGIN DECLARE string VARIABLES.IN_TRANSACTIONID;VARIABLES.IN_TRANSACTIONID = xPathValue(All_Customers_WS.All_Customers_accountholdings.getaccountholdings.accountholdings_InputMsg, '/*:accountholdings_Input/*:transactionid');SELECT * FROM All_Customers_Output_View.accountholdings_OutputView WHERE  (All_Customers_Output_View.accountholdings_OutputView.accountholdings_Output.accountholdings_Output_Instance.transactionid = VARIABLES.IN_TRANSACTIONID) ; END"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:52dea5b0-5221-4ddd-963d-cd491783e986" outputs="mmuuid/4f8d0474-bd14-43cf-a4ea-3a4169aae506"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:9e924487-bc52-458a-b141-fbb5500162d6" outputs="mmuuid/490a392a-c064-419d-8376-78fb9a7e13a5" target="mmuuid/490a392a-c064-419d-8376-78fb9a7e13a5">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:d6a1c434-f13b-4b53-9461-3194539cf97c">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:cabef813-481a-49d3-ba02-d6d6981e4abd" selectSql="CREATE VIRTUAL PROCEDURE BEGIN DECLARE string VARIABLES.IN_CUSTOMERID;VARIABLES.IN_CUSTOMERID = xPathValue(All_Customers_WS.All_Customers_customer.getcustomer.customer_InputMsg, '/*:customer_Input/*:customerid');SELECT * FROM All_Customers_Output_View.customer_OutputView WHERE  (All_Customers_Output_View.customer_OutputView.customer_Output.customer_Output_Instance.customerid = VARIABLES.IN_CUSTOMERID) ; END"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:bf00e69a-8a55-458e-93db-5e58a92a4355" outputs="mmuuid/47d1369c-d060-492e-9ed3-bf364421d917"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:4f04dde5-4b69-416e-b7cc-672b88b2c1f4">
+    <diagram xmi:uuid="mmuuid:2a79b207-531e-4fa8-9723-5ac6071c3bd2" type="packageDiagramType" target="mmuuid/43668745-9f6a-475e-baba-8132b39a5e44">
+      <diagramEntity xmi:uuid="mmuuid:767ab827-f2eb-43cf-998e-2d324df7102d" modelObject="mmuuid/019b6a4c-ae87-4b33-bdb0-05a72be87f64" xPosition="474" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:a1fbcb95-b7e4-4991-b1d6-068030e536ff" modelObject="mmuuid/d5cee077-d5dd-4540-9a10-92032e0afe4d" xPosition="10" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:aca4f01d-2fdd-47b9-ad86-505fa0b04a99" modelObject="mmuuid/8c276c0f-03a0-4764-b93b-ea556b4d3abd" xPosition="242" yPosition="10"/>
+    </diagram>
+  </diagram:DiagramContainer>
+</xmi:XMI>

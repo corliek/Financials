@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="http://www.metamatrix.com/account_Output" xmlns:Q1="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.metamatrix.com/account_Output">
+  <xs:import namespace="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" schemaLocation="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance"/>
+  <xs:element name="account_Output">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="account_Output_Instance" type="account_Output_Type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="account_Output_Type">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="accountid" nillable="false" type="Q1:bigdecimal"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="customerid" nillable="false" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="accounttype" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="accountstatus" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dateopened" nillable="false" type="Q1:timestamp"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dateclosed" nillable="true" type="Q1:timestamp"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="accountholdings_Output">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="accountholdings_Output_Instance" type="accountholdings_Output_Type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="accountholdings_Output_Type">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="transactionid" nillable="false" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="accountid" nillable="false" type="Q1:bigdecimal"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="productid" nillable="false" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="purchasedate" nillable="false" type="Q1:timestamp"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="productshares" nillable="true" type="Q1:bigdecimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="customer_Output">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="customer_Output_Instance" type="customer_Output_Type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="customer_Output_Type">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="customerid" nillable="false" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="firstname" nillable="false" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="lastname" nillable="false" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="middlename" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="streetaddress" nillable="false" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="streetaddress2" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="city" nillable="false" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="stateprovince" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="postalcode" nillable="false" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="country" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="phonenumber" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

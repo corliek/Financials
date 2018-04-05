@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="http://www.metamatrix.com/account_Input" xmlns:Q1="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.metamatrix.com/account_Input">
+  <xs:import namespace="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" schemaLocation="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance"/>
+  <xs:element name="account_Input" type="account_Input_Type"/>
+  <xs:complexType name="account_Input_Type">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="accountid" nillable="false" type="Q1:bigdecimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="accountholdings_Input" type="accountholdings_Input_Type"/>
+  <xs:complexType name="accountholdings_Input_Type">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="transactionid" nillable="false" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="customer_Input" type="customer_Input_Type"/>
+  <xs:complexType name="customer_Input_Type">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="customerid" nillable="false" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
